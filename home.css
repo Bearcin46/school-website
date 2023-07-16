@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.bg-pink{
+    background: plum ;
+}
+
+.slide1{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/images/main1.webp);
+   
+}
+
+.slide2{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/images/main2.webp);
+
+
+}
+img{
+    width:100%;
+}
+.bg-cover{
+    background-position:center !important;
+    background-size: cover !important;
+
+}
+.display-2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.owl-prev,
+.owl-next{
+    position:absolute;
+    top:50%;
+    width:60px !important;
+    height:60px !important;
+    display:grid;
+    place-items:center;
+    background-color: rgba(255,255,255,0.2) !important;
+   margin-top:-30px !important;
+   color:whitesmoke !important;
+   font-weight: 700 !important;
+   font-size: 12px !important;
+   border-radius:50% !important;
+}
+.owl-prev{
+    left:0;
+
+}
+.owl-next{
+    right:0;
+}
+.owl-next:hover,
+.owl-prev:hover{
+    background-color: rgb(160, 207, 221) !important;
+
+}
+section{
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+.btn-brand{
+    background: linear-gradient(to right,#00F260, #0575E6);;
+}
