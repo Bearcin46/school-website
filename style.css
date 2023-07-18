@@ -55,12 +55,14 @@ body{
 /* Base */
 *,
 ::before,
-::before {
+::after{
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  position:relative;
+  min-height: 100%;
 }
 
 body {
@@ -68,13 +70,13 @@ body {
   font-family: var(--body-font);
   font-size: var(--nomral-font-size);
   color: var(--second-color);
+
 }
 
 h1,
 h2,
 p {
   margin: 0;
-  padding:0;
 }
 
 ul {
@@ -130,18 +132,19 @@ img {
 @media screen and (max-width: 768px) {
   .nav_menu {
     position: fixed;
-    top: 3rem;
+    top: var(--header-height);
     right: -100%;
     width: 80%;
     height: 100%;
-    padding: 1rem;
+    padding: 2em;
     background-color: var(--second-color);
     transition: 0.5s;
+  
   }
 }
 
 .nav_items {
-  margin-bottom: var(--mb-1);
+  margin-bottom: var(--mb-4);
 }
 
 .nav_link {
@@ -167,7 +170,7 @@ img {
 .nav_logo {
   color: var(--second-color);
   text-decoration: none;
-top:3rem;
+
 }
 
 .nav_toggle {
@@ -181,7 +184,6 @@ top:3rem;
   position: absolute;
   content: "";
   width: 100%;
-  height: 0.18rem;
   left: 0;
   top: 2rem;
   background-color: var(--first-color);
@@ -249,18 +251,17 @@ top:3rem;
 }
 
 .about_img img {
-  width: 500px;
+  width: 600px;
   border-radius: 0.5rem;
 }
+.e-btn{
+  width:160px;
+  padding:0.5rem;
+  border:none;
+  margin-top: 1rem;
+}
 
-
-
-
-
-
-
-
-/* WORK */
+/* Facilities*/
 
 .work {
   text-align: center;
@@ -273,12 +274,15 @@ top:3rem;
 .work_img {
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
-  overflow: hidden;
+ overflow: hidden;
 }
 
 .work_img img {
   transition: 1s;
   cursor: pointer;
+  object-fit: cover;
+  width:100%;
+  height: 40vh;
 }
 
 .work_img img:hover {
@@ -305,30 +309,38 @@ top:3rem;
   font-size: var(--nomral-font-size);
   cursor: pointer;
   margin-left: auto;
+  margin-bottom: 15rem;
 }
 
 /* Footer */
+
 .footer {
   background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
-  padding: 2rem 0;
+  padding: 1rem 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:300px;
+
 }
 
 .footer_title {
   font-size: 2rem;
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-1);
 }
 
 .footer_socials {
+  margin-top: var(--mb-4);
   margin-bottom: var(--mb-4);
 }
 
 .footer_icon {
   font-size: 1.5rem;
   color: #fff;
-  margin: 0 var(--mb-2);
+  margin: 0 var(--mb-4);
 }
 
 @media screen and (min-width: 768px) {
@@ -373,11 +385,11 @@ top:3rem;
 
   
 
-  .about_container,
-  .skills_container {
+  .about_container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: initial;
+    justify-content: center;
    
   }
 
@@ -405,15 +417,5 @@ top:3rem;
     margin-right: auto;
   }
 
-  .home_img {
-    right: 10%;
-  }
-  .navi{
-    margin-top:1rem;
-  }
-  .navi-logo{
-    align-items: center;
-    display: flex;
-  font-size: larger;
-  }
+
 }
